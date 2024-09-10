@@ -13,20 +13,6 @@
   width: 144px;
 }
 
-#cherubim1 {
-  top: 16px;
-  right: 64px;
-}
-
-#cherubim2 {
-  top: 860px;
-  right: 64px;
-}
-
-#cherubim3 {
-  top: 575px;
-  left: 64px;
-}
 
 .marriage-desktop {
   padding: 64px;
@@ -131,8 +117,8 @@ body {
   }
   
   #cherubim3 {
-    top: 525px;
-    margin-left: -70px;
+    top: 525px !important;
+    margin-left: -70px !important;
   }
   
 }
@@ -208,6 +194,22 @@ body {
 
   .mobile-container {
     display: none;
+  }
+
+
+  #cherubim1 {
+    top: 16px;
+    right: 64px;
+  }
+
+  #cherubim2 {
+    top: 860px;
+    right: 64px;
+  }
+
+  #cherubim3 {
+    top: 575px;
+    left: 64px;
   }
 
   
