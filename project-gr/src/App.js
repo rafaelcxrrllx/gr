@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <TimeSince /> {/* Use the timer component */}
-        <h1>est. August 19th, 2024</h1>
+        <h2>est. August 19th, 2024</h2>
 
       </header>
     </div>
