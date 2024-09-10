@@ -8,6 +8,32 @@
 }
 
 
+.cherubim {
+  position: absolute;
+  width: 144px;
+}
+
+#cherubim1 {
+  top: 16px;
+  right: 64px;
+}
+
+#cherubim2 {
+  top: 860px;
+  right: 64px;
+}
+
+#cherubim3 {
+  top: 575px;
+  left: 64px;
+}
+
+.marriage-desktop {
+  padding: 64px;
+  font-size: 32px;
+}
+
+
 body {
   font-family: 'Lovers Quarrel', cursive;
   background-color: #FFBCBC;
@@ -27,7 +53,7 @@ body {
 
 
 .main-container {
-  display: inline-flex;
+  display: block;
 }
 
 .timer-inner-container {
@@ -46,8 +72,8 @@ body {
 .postcard {
   width: 400px;
   height: auto;
-  margin-left: 33px;
   border-radius: 12px;
+  margin-top: 64px;
 }
 
 
@@ -66,7 +92,7 @@ body {
   .postcard {
     width: 300px;
     margin-left: 0px;
-    margin-top: 32px;
+    margin-top: 102px;
     margin-bottom: 144px;
 
   }
@@ -95,17 +121,17 @@ body {
   }
   
   #cherubim1 {
-    top: 800px;
-    left: 32px;
+    top: 16px;
+    right: 32px;
   }
   
   #cherubim2 {
-    top: 1000px;
+    top: 1250px;
     right: 32px;
   }
   
   #cherubim3 {
-    top: 450px;
+    top: 525px;
     margin-left: -70px;
   }
   
@@ -127,6 +153,7 @@ body {
     width: 400px;
     height: auto;
     margin-left: 0px;
+    margin-top: 84px;
   }
 
   .timer-container {
@@ -144,6 +171,33 @@ body {
     display: none;
   }
 
+
+  .cherubim {
+    position: absolute;
+    width: 144px;
+  }
+  
+  #cherubim1 {
+    top: 16px;
+    right: 32px;
+  }
+  
+  #cherubim2 {
+    top: 860px;
+    right: 32px;
+  }
+  
+  #cherubim3 {
+    top: 675px;
+    margin-left: -70px;
+  }
+
+  .marriage-desktop {
+    padding: 64px;
+    font-size: 32px;
+  }
+  
+
 }
 
 @media (min-width: 1025px) {
@@ -155,5 +209,7 @@ body {
   .mobile-container {
     display: none;
   }
+
+  
 
 }
