@@ -1,7 +1,7 @@
 // src/TimeSince.js
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import postcard from './postcard.svg'
+import postcard from './postcard.jpg'
 import cherubim1 from './cherubim1.svg'
 import cherubim2 from './cherubim2.svg'
 import cherubim3 from './cherubim3.svg'
@@ -90,31 +90,31 @@ const TimeSince = () => {
     <div className='postcard-container'>
         <img src={postcard} className='postcard' alt="An image of a young couple in love <3"/>
     </div>
-    <h2>est. August 19th, 2024</h2>
+    <h1>est. August 19th, 2024</h1>
     <div className='timer-container'>
        
             <div className='timer-inner-container'>
-                <p>{timeSince.years}</p>
+                <p className='time'>{timeSince.years}</p>
                 <p className='proximity'>years</p>
             </div>
             <div className='timer-inner-container'>
-                <p>{timeSince.months}</p>
+                <p className='time'>{timeSince.months}</p>
                 <p className='proximity'>months</p>
             </div>
             <div className='timer-inner-container'>
-                <p>{timeSince.weeks}</p>
+                <p className='time'>{timeSince.weeks}</p>
                 <p className='proximity'>weeks</p>
             </div>
             <div className='timer-inner-container'>
-                <p>{timeSince.days}</p>
+                <p className='time'>{timeSince.days}</p>
                 <p className='proximity'>days</p>
             </div>
             <div className='timer-inner-container'>
-                <p>{timeSince.minutes}</p>
+                <p className='time'>{timeSince.minutes}</p>
                 <p className='proximity'>minutes</p>
             </div>
             <div className='timer-inner-container'>
-                <p>{timeSince.seconds}</p>
+                <p className='time'>{timeSince.seconds}</p>
                 <p className='proximity'>seconds</p>
             </div>
         </div>

@@ -1,21 +1,10 @@
-.App {
-  text-align: center;
-}
-
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 .postcard-container {
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.time {
+  font-size: 48px;
 }
 
 
@@ -28,30 +17,6 @@ body {
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
 
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #000000;
-  margin-top: 33px;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .timer-container {
@@ -104,15 +69,13 @@ body {
   width: 400px;
   height: auto;
   margin-left: 33px;
+  border-radius: 12px;
 }
 
 
 
 @media (max-width: 600px) {
-  .App-logo {
-      width: 33%;
-      margin-top: 0%;
-  }
+
 
   .main-container {
     display: none;
@@ -125,8 +88,8 @@ body {
   .postcard {
     width: 300px;
     margin-left: 0px;
-    margin-top: -150px;
-    margin-bottom: 52px;
+    margin-top: 32px;
+    margin-bottom: 144px;
 
   }
 
@@ -141,13 +104,14 @@ body {
 
   .timer-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     gap: 12px;
-    font-size: 24px;
+    font-size: 32px;
     padding: 0px;
     border-radius: 15px;
     align-items: center;
-    margin-bottom: -75px;
+    margin-bottom: 32px;
   }
   
 }

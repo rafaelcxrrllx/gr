@@ -7,19 +7,15 @@ import { motion } from 'framer-motion';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='app-container'>
         <LoadingScreen/>
         <TimeSince /> {/* Use the timer component */}
         <motion.div
       initial={{ y: '1vw', opacity: 0 }} // Initial opacity set to 0
       animate={{ y: 0, opacity:  1 }} // Animate opacity to 1
       transition={{ duration: 1 , delay: 2}}>
-        <h2 className='date'>est. August 19th, 2024</h2>
+        <h1 className='date'>est. August 19th, 2024</h1>
         </motion.div>
-      </header>
-
-      
     </div>
   );
 }
