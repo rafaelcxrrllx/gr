@@ -2,9 +2,14 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.postcard-container {
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -12,6 +17,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 body {
   font-family: 'Lovers Quarrel', cursive;
@@ -97,6 +103,7 @@ body {
 .postcard {
   width: 400px;
   height: auto;
+  margin-left: 33px;
 }
 
 
@@ -106,6 +113,43 @@ body {
       width: 33%;
       margin-top: 0%;
   }
+
+  .main-container {
+    display: none;
+  }
+
+  .date {
+    display: none;
+  }
+
+  .postcard {
+    width: 300px;
+    margin-left: 0px;
+    margin-top: -150px;
+    margin-bottom: 52px;
+
+  }
+
+  body {
+   
+    background-image: url('mobilewallpaper.svg');
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat;
+  
+  }
+
+  .timer-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 12px;
+    font-size: 24px;
+    padding: 0px;
+    border-radius: 15px;
+    align-items: center;
+    margin-bottom: -75px;
+  }
+  
 }
 
 
@@ -113,7 +157,42 @@ body {
   .App-logo {
       width: 20%;
       margin-top: 0%;
+      
   }  
+
+  .main-container {
+    display: block;
+  }
+
+  .postcard {
+    width: 400px;
+    height: auto;
+    margin-left: 0px;
+  }
+
+  body {
+   
+    background-image: url('tabletwallpaper.svg');
+    background-size: cover;    
+    background-position: center; 
+    background-repeat: no-repeat;
+  
+  }
+
+  .timer-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 33px;
+    font-size: 40px;
+    margin-top: 100px;
+    padding: 14px 32px;
+    border-radius: 15px;
+    align-items: center;
+  }
+
+  .mobile-container {
+    display: none;
+  }
 
 }
 
@@ -122,5 +201,9 @@ body {
       width: 14%;
       margin-top: 0%;
   }  
+
+  .mobile-container {
+    display: none;
+  }
 
 }

@@ -15,10 +15,11 @@ function App() {
       initial={{ y: '1vw', opacity: 0 }} // Initial opacity set to 0
       animate={{ y: 0, opacity:  1 }} // Animate opacity to 1
       transition={{ duration: 1 , delay: 2}}>
-        <h2>est. August 19th, 2024</h2>
+        <h2 className='date'>est. August 19th, 2024</h2>
         </motion.div>
-
       </header>
+
+      
     </div>
   );
 }

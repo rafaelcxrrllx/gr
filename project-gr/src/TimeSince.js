@@ -51,13 +51,13 @@ const TimeSince = () => {
         animate={{ y: 0, opacity:  1 }} // Animate opacity to 1
         transition={{ duration: 1 , delay: 2}}
         className='main-container'>
+
         <div className='postcard-container'>
             <img src={postcard} className='postcard' alt="An image of a young couple in love <3"/>
         </div>
+
         <div className='timer-container'>
-        {/* <img src={cherubim1} className='cherubim' id="cherubim-one" alt="An image of a cherubim"/>
-        <img src={cherubim2} className='cherubim' id="cherubim-two" alt="An image of a cherubim"/>
-        <img src={cherubim3} className='cherubim' id="cherubim-three" alt="An image of a cherubim"/> */}
+       
             <div className='timer-inner-container'>
                 <p>{timeSince.years}</p>
                 <p className='proximity'>years</p>
@@ -83,7 +83,45 @@ const TimeSince = () => {
                 <p className='proximity'>seconds</p>
             </div>
         </div>
+
       </motion.div>
+    
+    <div className='mobile-container'>
+    <div className='postcard-container'>
+        <img src={postcard} className='postcard' alt="An image of a young couple in love <3"/>
+    </div>
+    <h2>est. August 19th, 2024</h2>
+    <div className='timer-container'>
+       
+            <div className='timer-inner-container'>
+                <p>{timeSince.years}</p>
+                <p className='proximity'>years</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeSince.months}</p>
+                <p className='proximity'>months</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeSince.weeks}</p>
+                <p className='proximity'>weeks</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeSince.days}</p>
+                <p className='proximity'>days</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeSince.minutes}</p>
+                <p className='proximity'>minutes</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeSince.seconds}</p>
+                <p className='proximity'>seconds</p>
+            </div>
+        </div>
+    </div>
+
+
+      
     </div>
   );
 };
