@@ -78,7 +78,7 @@ body {
   .postcard {
     width: 300px;
     margin-left: 0px;
-    margin-top: 102px;
+    margin-top: 64px;
     margin-bottom: 104px;
 
   }
@@ -103,22 +103,23 @@ body {
 
   .cherubim {
     position: absolute;
-    width: 77px;
+    width: 100px;
+    margin-top: -32px;
   }
   
   #cherubim1 {
-    top: 16px;
-    right: 32px;
+    top: 816px;
+    left: 32px;
   }
   
   #cherubim2 {
-    top: 1300px;
+    top: 1325px;
     right: 32px;
   }
   
   #cherubim3 {
     top: 525px !important;
-    margin-left: -35px !important;
+    margin-left: -50px !important;
   }
   
 }

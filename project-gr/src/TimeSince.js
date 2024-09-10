@@ -166,7 +166,9 @@ const TimeSince = () => {
         </div>
         <h3>
             19 = 1 + 9 = 10 = 1 + 0 = 1
+           
         </h3>
+        <br/>
             <p className='marriage'>
             You were born together, and together you
             shall be forevermore.
