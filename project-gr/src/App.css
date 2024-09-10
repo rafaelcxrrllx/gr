@@ -17,6 +17,10 @@ body {
   font-family: 'Lovers Quarrel', cursive;
   background-color: #FFBCBC;
   text-align: center;
+  background-image: url('wallpaper.svg');
+  background-size: cover;      /* Ensures the image covers the entire page */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 
 }
 
@@ -88,4 +92,35 @@ body {
 
 .proximity {
   margin-top: -72px;
+}
+
+.postcard {
+  width: 400px;
+  height: auto;
+}
+
+
+
+@media (max-width: 600px) {
+  .App-logo {
+      width: 33%;
+      margin-top: 0%;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .App-logo {
+      width: 20%;
+      margin-top: 0%;
+  }  
+
+}
+
+@media (min-width: 1025px) {
+  .App-logo {
+      width: 14%;
+      margin-top: 0%;
+  }  
+
 }

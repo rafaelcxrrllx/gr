@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
-import logo from '../assets/logo.svg';
-import '../styling/LoadingScreen.css';
-import '../styling/styles.css'; // Global Styling
+import logo from './logo.svg';
+import './LoadingScreen.css';
+import './App.css'; // Global Styling
 
 
   

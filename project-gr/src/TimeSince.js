@@ -5,6 +5,7 @@ import postcard from './postcard.svg'
 import cherubim1 from './cherubim1.svg'
 import cherubim2 from './cherubim2.svg'
 import cherubim3 from './cherubim3.svg'
+import { motion } from 'framer-motion';
 
 const TimeSince = () => {
   const [timeSince, setTimeSince] = useState({
@@ -45,14 +46,18 @@ const TimeSince = () => {
 
   return (
     <div>
-      <div className='main-container'>
+      <motion.div 
+        initial={{ y: '1vw', opacity: 0 }} // Initial opacity set to 0
+        animate={{ y: 0, opacity:  1 }} // Animate opacity to 1
+        transition={{ duration: 1 , delay: 2}}
+        className='main-container'>
         <div className='postcard-container'>
-            <img src={postcard} alt="An image of a young couple in love <3"/>
+            <img src={postcard} className='postcard' alt="An image of a young couple in love <3"/>
         </div>
         <div className='timer-container'>
-        <img src={cherubim1} className='cherubim' id="cherubim-one" alt="An image of a cherubim"/>
+        {/* <img src={cherubim1} className='cherubim' id="cherubim-one" alt="An image of a cherubim"/>
         <img src={cherubim2} className='cherubim' id="cherubim-two" alt="An image of a cherubim"/>
-        <img src={cherubim3} className='cherubim' id="cherubim-three" alt="An image of a cherubim"/>
+        <img src={cherubim3} className='cherubim' id="cherubim-three" alt="An image of a cherubim"/> */}
             <div className='timer-inner-container'>
                 <p>{timeSince.years}</p>
                 <p className='proximity'>years</p>
@@ -78,7 +83,7 @@ const TimeSince = () => {
                 <p className='proximity'>seconds</p>
             </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
