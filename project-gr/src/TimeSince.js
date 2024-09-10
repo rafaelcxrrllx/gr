@@ -46,6 +46,10 @@ const TimeSince = () => {
 
   return (
     <div>
+    <img className='cherubim' id="cherubim1" src={cherubim1} alt="cherubim" />
+    <img className='cherubim' id="cherubim2" src={cherubim2} alt="cherubim" />
+    <img className='cherubim' id="cherubim3" src={cherubim3} alt="cherubim" />
+
       <motion.div 
         initial={{ y: '1vw', opacity: 0 }} // Initial opacity set to 0
         animate={{ y: 0, opacity:  1 }} // Animate opacity to 1

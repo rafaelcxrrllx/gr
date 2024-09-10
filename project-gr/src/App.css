@@ -12,11 +12,7 @@ body {
   font-family: 'Lovers Quarrel', cursive;
   background-color: #FFBCBC;
   text-align: center;
-  background-image: url('wallpaper.svg');
-  background-size: cover;      /* Ensures the image covers the entire page */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-
+ 
 }
 
 .timer-container {
@@ -29,24 +25,6 @@ body {
   align-items: center;
 }
 
-.cherubim {
-  position: absolute;
-}
-
-#cherubim-one {
-  top: 105px;
-  left: 620px;
-}
-
-#cherubim-two {
-  right: 100px;
-  top: 150px;
-}
-
-#cherubim-three {
-  bottom: 200px;
-  right: 400px;
-}
 
 .main-container {
   display: inline-flex;
@@ -95,17 +73,9 @@ body {
 
   .marriage {
     padding: 32px;
-    font-size: 24px;
+    font-size: 32px;
   }
 
-  body {
-   
-    background-image: url('mobilewallpaper.svg');
-    background-size: cover;    
-    background-position: center; 
-    background-repeat: no-repeat;
-  
-  }
 
   .timer-container {
     display: flex;
@@ -117,6 +87,26 @@ body {
     border-radius: 15px;
     align-items: center;
     margin-bottom: 32px;
+  }
+
+  .cherubim {
+    position: absolute;
+    width: 144px;
+  }
+  
+  #cherubim1 {
+    top: 800px;
+    left: 64px;
+  }
+  
+  #cherubim2 {
+    top: 1000px;
+    right: 64px;
+  }
+  
+  #cherubim3 {
+    top: 450px;
+    margin-left: -70px;
   }
   
 }
@@ -139,20 +129,11 @@ body {
     margin-left: 0px;
   }
 
-  body {
-   
-    background-image: url('tabletwallpaper.svg');
-    background-size: cover;    
-    background-position: center; 
-    background-repeat: no-repeat;
-  
-  }
-
   .timer-container {
     display: flex;
     justify-content: space-evenly;
     gap: 33px;
-    font-size: 40px;
+    font-size: 32px;
     margin-top: 100px;
     padding: 14px 32px;
     border-radius: 15px;
