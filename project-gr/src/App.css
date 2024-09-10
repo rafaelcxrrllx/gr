@@ -93,6 +93,11 @@ body {
 
   }
 
+  .marriage {
+    padding: 32px;
+    font-size: 24px;
+  }
+
   body {
    
     background-image: url('mobilewallpaper.svg');
