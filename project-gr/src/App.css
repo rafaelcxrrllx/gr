@@ -73,7 +73,7 @@ body {
 
   .marriage {
     padding: 32px;
-    font-size: 32px;
+    font-size: 24px;
   }
 
 
@@ -91,7 +91,7 @@ body {
 
   .cherubim {
     position: absolute;
-    width: 50px;
+    width: 144px;
   }
   
   #cherubim1 {

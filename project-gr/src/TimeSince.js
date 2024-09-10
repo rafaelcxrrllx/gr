@@ -135,7 +135,7 @@ const TimeSince = () => {
             But let there be spaces in your togetherness,
             And let the winds of the heavens dance
             between you.
-        
+            <br/><br/>
             Love one another, but make not a bond
             of love:
             Let it rather be a moving sea between
@@ -148,7 +148,7 @@ const TimeSince = () => {
             but let each one of you be alone,
             Even as the strings of a lute are alone
             though they quiver with the same music.
-        
+            <br/><br/>
             Give your hearts, but not into each
             other’s keeping.
             For only the hand of Life can contain
