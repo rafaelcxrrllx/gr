@@ -1,5 +1,10 @@
 // src/TimeSince.js
 import React, { useState, useEffect } from 'react';
+import './App.css';
+import postcard from './postcard.svg'
+import cherubim1 from './cherubim1.svg'
+import cherubim2 from './cherubim2.svg'
+import cherubim3 from './cherubim3.svg'
 
 const TimeSince = () => {
   const [timeSince, setTimeSince] = useState({
@@ -7,10 +12,12 @@ const TimeSince = () => {
     months: 0,
     weeks: 0,
     days: 0,
+    minutes: 0,
+    seconds: 0,
   });
 
   useEffect(() => {
-    const targetDate = new Date('2024-08-19T00:00:00');
+    const targetDate = new Date('2024-08-19T20:33:00')
     
     const calculateTimeSince = () => {
       const now = new Date();
@@ -22,8 +29,11 @@ const TimeSince = () => {
       const daysSinceStart = Math.floor(diff / (1000 * 60 * 60 * 24)); // Total days since target date
       const weeks = Math.floor(daysSinceStart / 7); // Full weeks since target date
       const days = daysSinceStart % 7; // Remaining days after weeks
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
       
-      setTimeSince({ years, months, weeks, days });
+      setTimeSince({ years, months, weeks, days, minutes, seconds, });
     };
 
     // Calculate every second
@@ -35,11 +45,40 @@ const TimeSince = () => {
 
   return (
     <div>
-      <h1>Time Since August 19th, 2024</h1>
-      <p>{timeSince.years} Years</p>
-      <p>{timeSince.months} Months</p>
-      <p>{timeSince.weeks} Weeks</p>
-      <p>{timeSince.days} Days</p>
+      <div className='main-container'>
+        <div className='postcard-container'>
+            <img src={postcard} alt="An image of a young couple in love <3"/>
+        </div>
+        <div className='timer-container'>
+        <img src={cherubim1} className='cherubim' id="cherubim-one" alt="An image of a cherubim"/>
+        <img src={cherubim2} className='cherubim' id="cherubim-two" alt="An image of a cherubim"/>
+        <img src={cherubim3} className='cherubim' id="cherubim-three" alt="An image of a cherubim"/>
+            <div className='timer-inner-container'>
+                <p>{timeSince.years}</p>
+                <p className='proximity'>years</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeSince.months}</p>
+                <p className='proximity'>months</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeSince.weeks}</p>
+                <p className='proximity'>weeks</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeSince.days}</p>
+                <p className='proximity'>days</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeSince.minutes}</p>
+                <p className='proximity'>minutes</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeSince.seconds}</p>
+                <p className='proximity'>seconds</p>
+            </div>
+        </div>
+      </div>
     </div>
   );
 };

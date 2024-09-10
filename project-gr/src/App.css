@@ -13,15 +13,22 @@
   }
 }
 
+body {
+  font-family: 'Lovers Quarrel', cursive;
+  background-color: #FFBCBC;
+  text-align: center;
+
+}
+
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000000;
+  margin-top: 33px;
 }
 
 .App-link {
@@ -35,4 +42,50 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.timer-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 33px;
+  font-size: 64px;
+  padding: 33px 64px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.cherubim {
+  position: absolute;
+}
+
+#cherubim-one {
+  top: 105px;
+  left: 620px;
+}
+
+#cherubim-two {
+  right: 100px;
+  top: 150px;
+}
+
+#cherubim-three {
+  bottom: 200px;
+  right: 400px;
+}
+
+.main-container {
+  display: inline-flex;
+}
+
+.timer-inner-container {
+  display: inline-block;
+  max-height: max-content;
+}
+
+.timer-inner-container p{
+  margin: 0px;
+}
+
+.proximity {
+  margin-top: -72px;
 }
