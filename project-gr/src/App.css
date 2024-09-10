@@ -79,7 +79,7 @@ body {
     width: 300px;
     margin-left: 0px;
     margin-top: 102px;
-    margin-bottom: 144px;
+    margin-bottom: 104px;
 
   }
 
@@ -103,7 +103,7 @@ body {
 
   .cherubim {
     position: absolute;
-    width: 144px;
+    width: 77px;
   }
   
   #cherubim1 {
@@ -112,13 +112,13 @@ body {
   }
   
   #cherubim2 {
-    top: 1250px;
+    top: 1300px;
     right: 32px;
   }
   
   #cherubim3 {
     top: 525px !important;
-    margin-left: -70px !important;
+    margin-left: -35px !important;
   }
   
 }
