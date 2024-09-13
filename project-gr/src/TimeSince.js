@@ -1,4 +1,3 @@
-// src/TimeSince.js
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import postcard from './postcard.jpg'
@@ -7,42 +6,85 @@ import cherubim2 from './cherubim2.svg'
 import cherubim3 from './cherubim3.svg'
 import { motion } from 'framer-motion';
 
+
 const TimeSince = () => {
-  const [timeSince, setTimeSince] = useState({
+  const [timeElapsed, setTimeElapsed] = useState({
     years: 0,
     months: 0,
-    weeks: 0,
     days: 0,
-    minutes: 0,
-    seconds: 0,
+    hours: 0,
+    minutes: 0, 
+    seconds: 0
   });
 
   useEffect(() => {
-    const targetDate = new Date('2024-08-19T20:33:00')
-    
-    const calculateTimeSince = () => {
-      const now = new Date();
-      const diff = now - targetDate; // Difference in milliseconds
-      
-      const diffDate = new Date(diff);
-      const years = diffDate.getUTCFullYear() - 1970; // subtract epoch start
-      const months = diffDate.getUTCMonth(); // get month difference
-      const daysSinceStart = Math.floor(diff / (1000 * 60 * 60 * 24)); // Total days since target date
-      const weeks = Math.floor(daysSinceStart / 7); // Full weeks since target date
-      const days = daysSinceStart % 7; // Remaining days after weeks
-      const minutes = Math.floor((diff / 1000 / 60) % 60);
-      const seconds = Math.floor((diff / 1000) % 60);
+    const startDate = new Date('2024-08-19T20:08:33'); // Your start date and time
 
-      
-      setTimeSince({ years, months, weeks, days, minutes, seconds, });
+    const updateElapsedTime = () => {
+      const now = new Date();
+      const elapsed = getElapsedTime(startDate, now);
+      setTimeElapsed(elapsed);
     };
 
-    // Calculate every second
-    const intervalId = setInterval(calculateTimeSince, 1000);
+    const intervalId = setInterval(updateElapsedTime, 1000); // Update every second
+    updateElapsedTime(); // Initial calculation when the component mounts
 
-    // Cleanup interval on component unmount
-    return () => clearInterval(intervalId);
+    return () => clearInterval(intervalId); // Clean up the interval when the component unmounts
   }, []);
+
+  const getElapsedTime = (startDate, endDate) => {
+    let years = endDate.getFullYear() - startDate.getFullYear();
+    
+    let months = endDate.getMonth() - startDate.getMonth();
+    if (months < 0) {
+      months += 12;
+      years--;
+    }
+
+    let days = endDate.getDate() - startDate.getDate();
+    if (days < 0) {
+      const prevMonthDays = new Date(endDate.getFullYear(), endDate.getMonth(), 0).getDate(); // Days in the previous month
+      days += prevMonthDays;
+      months--;
+      if (months < 0) {
+        months += 12;
+        years--;
+      }
+    }
+
+    
+
+    let hours = endDate.getHours() - startDate.getHours();
+    let minutes = endDate.getMinutes() - startDate.getMinutes();
+    let seconds = endDate.getSeconds() - startDate.getSeconds();
+
+    // Adjust for negative seconds
+    if (seconds < 0) {
+        seconds += 60;
+        minutes--;
+      }
+  
+      // Adjust for negative minutes
+      if (minutes < 0) {
+        minutes += 60;
+        hours--;
+      }
+  
+      // Adjust for negative hours
+      if (hours < 0) {
+        hours += 24;
+        days--;
+      }
+
+    return {
+      years,
+      months,
+      days,
+      hours: (hours + 24) % 24, // Positive hour difference
+      minutes: (minutes + 60) % 60, // Positive minute difference
+      seconds: (seconds + 60) % 60
+    };
+  };
 
   return (
     <div>
@@ -65,32 +107,33 @@ const TimeSince = () => {
         <div className='timer-container'>
        
             <div className='timer-inner-container'>
-                <p>{timeSince.years}</p>
+                <p>{timeElapsed.years}</p>
                 <p className='proximity'>years</p>
             </div>
             <div className='timer-inner-container'>
-                <p>{timeSince.months}</p>
+                <p>{timeElapsed.months}</p>
                 <p className='proximity'>months</p>
             </div>
+            
             <div className='timer-inner-container'>
-                <p>{timeSince.weeks}</p>
-                <p className='proximity'>weeks</p>
-            </div>
-            <div className='timer-inner-container'>
-                <p>{timeSince.days}</p>
+                <p>{timeElapsed.days}</p>
                 <p className='proximity'>days</p>
             </div>
             <div className='timer-inner-container'>
-                <p>{timeSince.minutes}</p>
+                <p>{timeElapsed.hours}</p>
+                <p className='proximity'>hours</p>
+            </div>
+            <div className='timer-inner-container'>
+                <p>{timeElapsed.minutes}</p>
                 <p className='proximity'>minutes</p>
             </div>
             <div className='timer-inner-container'>
-                <p>{timeSince.seconds}</p>
+                <p>{timeElapsed.seconds}</p>
                 <p className='proximity'>seconds</p>
             </div>
         </div>
         <h3>
-            19 = 1 + 9 = 10 = 1 + 0 = 1
+        19 = 1 + 9 = 10 = 1 + 0 = 1
         </h3>
             <p className='marriage-desktop'>
             You were born together, and together you
@@ -139,33 +182,34 @@ const TimeSince = () => {
     <h1>est. August 19th, 2024</h1>
     <div className='timer-container'>
        
-            <div className='timer-inner-container'>
-                <p className='time'>{timeSince.years}</p>
-                <p className='proximity'>years</p>
-            </div>
-            <div className='timer-inner-container'>
-                <p className='time'>{timeSince.months}</p>
-                <p className='proximity'>months</p>
-            </div>
-            <div className='timer-inner-container'>
-                <p className='time'>{timeSince.weeks}</p>
-                <p className='proximity'>weeks</p>
-            </div>
-            <div className='timer-inner-container'>
-                <p className='time'>{timeSince.days}</p>
-                <p className='proximity'>days</p>
-            </div>
-            <div className='timer-inner-container'>
-                <p className='time'>{timeSince.minutes}</p>
-                <p className='proximity'>minutes</p>
-            </div>
-            <div className='timer-inner-container'>
-                <p className='time'>{timeSince.seconds}</p>
-                <p className='proximity'>seconds</p>
-            </div>
-        </div>
+       <div className='timer-inner-container'>
+           <p>{timeElapsed.years}</p>
+           <p className='proximity'>years</p>
+       </div>
+       <div className='timer-inner-container'>
+           <p>{timeElapsed.months}</p>
+           <p className='proximity'>months</p>
+       </div>
+       
+       <div className='timer-inner-container'>
+           <p>{timeElapsed.days}</p>
+           <p className='proximity'>days</p>
+       </div>
+       <div className='timer-inner-container'>
+           <p>{timeElapsed.hours}</p>
+           <p className='proximity'>hours</p>
+       </div>
+       <div className='timer-inner-container'>
+           <p>{timeElapsed.minutes}</p>
+           <p className='proximity'>minutes</p>
+       </div>
+       <div className='timer-inner-container'>
+           <p>{timeElapsed.seconds}</p>
+           <p className='proximity'>seconds</p>
+       </div>
+   </div>
         <h3>
-            19 = 1 + 9 = 10 = 1 + 0 = 1
+        19 = 1 + 9 = 10 = 1 + 0 = 1
            
         </h3>
         <br/>
